@@ -343,83 +343,88 @@ function AboutSection() {
 // Services Section
 function ServicesSection() {
     return (
-        <section id="services" className="bg-white py-16 md:py-24">
-            <div className="container mx-auto px-6 md:px-[120px]">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-12 md:mb-16 md:text-center space-y-6"
-                >
-                    <h2 className="text-[#0d114d] text-[32px] md:text-[40px] leading-tight font-['Figtree:Regular',sans-serif]">
-                        Prepare, Practice, and Succeed.
-                    </h2>
-                    <p className="text-[#0d114d] text-base md:text-lg font-['Figtree:Regular',sans-serif] leading-relaxed md:max-w-3xl md:mx-auto">
-                        AcemyX simplifies your prep with a personal plan built around your goals. We provide thousands of expert questions and full mock exams to help you track your progress with ease.
-                    </p>
-                    <div className="flex flex-wrap md:justify-center gap-4">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={() => window.open(ACADEMY_URL, '_blank')}
-                            className="px-6 py-4 bg-[#ffdb51] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-base hover:shadow-lg hover:shadow-[#ffdb51]/30 transition-shadow"
-                        >
-                            Try AcemyX for Free
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={() => scrollToSection('pricing')}
-                            className="px-6 py-4 border border-[#0d114d] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-base"
-                        >
-                            Explore Pricing
-                        </motion.button>
-                    </div>
-                </motion.div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    {[
-                        {
-                            image: imgTablerIconNotebook128X128Png1,
-                            title: "Study at your own pace",
-                            description: "Share your goals with us, and AcemyX will build a custom plan that adapts as you learn."
-                        },
-                        {
-                            image: imgTablerIconNotebook128X128Png2,
-                            title: "Smart Learning Tools",
-                            description: "Our technology identifies your strengths and shows you exactly where to focus to gain the most points."
-                        },
-                        {
-                            image: imgTablerIconNotebook128X128Png3,
-                            title: "Learn with Friends and Mentors",
-                            description: "You aren't in this alone. Connect with peers and experts to solve tough problems together."
-                        }
-                    ].map((service, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="space-y-6"
-                        >
-                            <div className="w-16 h-16">
-                                <img src={service.image} alt="" className="w-full h-full" />
-                            </div>
-                            <div className="space-y-3">
-                                <h3 className="text-[#0d114d] text-xl font-['Figtree:Medium',sans-serif]">
-                                    {service.title}
-                                </h3>
-                                <p className="text-[#0d114d] text-base font-['Figtree:Regular',sans-serif] leading-relaxed">
-                                    {service.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
+      <section id="services" className="bg-white py-16 md:py-24">
+        <div className="container mx-auto px-6 md:px-[120px]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 md:mb-16 md:text-center space-y-6"
+          >
+            <h2 className="text-[#0d114d] text-[32px] md:text-[40px] leading-tight font-['Figtree:Regular',sans-serif]">
+              Prepare, Practice, and Succeed.
+            </h2>
+            <p className="text-[#0d114d] text-base md:text-lg font-['Figtree:Regular',sans-serif] leading-relaxed md:max-w-3xl md:mx-auto">
+              AcemyX simplifies your prep with a personal plan built around your
+              goals. We provide thousands of expert questions and full mock
+              exams to help you track your progress with ease.
+            </p>
+            <div className="flex flex-wrap md:justify-center gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.open(ACADEMY_URL, "_blank")}
+                className="px-6 py-4 bg-[#ffdb51] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-sm md:text-base hover:shadow-lg hover:shadow-[#ffdb51]/30 transition-shadow"
+              >
+                Try AcemyX for Free
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection("pricing")}
+                className="px-6 py-4 border border-[#0d114d] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-sm md:text-base"
+              >
+                Explore Pricing
+              </motion.button>
             </div>
-        </section>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                image: imgTablerIconNotebook128X128Png1,
+                title: "Study at your own pace",
+                description:
+                  "Share your goals with us, and AcemyX will build a custom plan that adapts as you learn.",
+              },
+              {
+                image: imgTablerIconNotebook128X128Png2,
+                title: "Smart Learning Tools",
+                description:
+                  "Our technology identifies your strengths and shows you exactly where to focus to gain the most points.",
+              },
+              {
+                image: imgTablerIconNotebook128X128Png3,
+                title: "Learn with Friends and Mentors",
+                description:
+                  "You aren't in this alone. Connect with peers and experts to solve tough problems together.",
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="space-y-6"
+              >
+                <div className="w-16 h-16">
+                  <img src={service.image} alt="" className="w-full h-full" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-[#0d114d] text-xl font-['Figtree:Medium',sans-serif]">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#0d114d] text-base font-['Figtree:Regular',sans-serif] leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     );
 }
 
@@ -806,16 +811,16 @@ function AITutorSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open(ACADEMY_URL, '_blank')}
-                  className="px-6 py-4 bg-[#ffdb51] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-base hover:shadow-lg hover:shadow-[#ffdb51]/30 transition-shadow"
+                  onClick={() => window.open(ACADEMY_URL, "_blank")}
+                  className="px-6 py-4 bg-[#ffdb51] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-sm md:text-base hover:shadow-lg hover:shadow-[#ffdb51]/30 transition-shadow"
                 >
                   Get Guided Help
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open(ACADEMY_URL, '_blank')}
-                  className="px-6 py-4 border border-[#0d114d] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-base"
+                  onClick={() => window.open(ACADEMY_URL, "_blank")}
+                  className="px-6 py-4 border border-[#0d114d] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-sm md:text-base"
                 >
                   See an Example
                 </motion.button>
@@ -903,45 +908,51 @@ function FAQSection() {
 // Still Need a Hand CTA Section
 function StillNeedAHandSection() {
     return (
-        <section className="bg-[#010105] py-16 md:py-24">
-            <div className="container mx-auto px-6 md:px-[120px]">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="flex flex-col items-start md:items-center text-left md:text-center gap-8 md:gap-9 md:max-w-[671px] md:mx-auto"
-                >
-                    <div className="flex flex-col gap-4 text-white font-['Figtree:Regular',sans-serif]">
-                        <h2 className="text-[32px] md:text-[40px] leading-[1.1] tracking-[-0.03em]">
-                            Still Need a Hand?
-                        </h2>
-                        <p className="text-[16px] leading-[22px] tracking-[-0.056px]">
-                            Our team of mentors is ready to help you navigate your university admission journey.{" "}
-                            We are committed to making sure every student in Nigeria feels supported and ready.
-                        </p>
-                    </div>
-                    <div className="flex flex-wrap gap-3 md:gap-4 items-center">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={() => window.open('https://wa.me/2348122990975?text=Hello!%20I%20will%20like%20to%20know%20more%20about%20AcemyX.', '_blank')}
-                            className="px-6 py-[18px] bg-[#dcfa7f] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-base hover:shadow-lg hover:shadow-[#dcfa7f]/20 transition-shadow"
-                        >
-                            Chat with a Mentor
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={() => window.open('mailto:contact@acemyx.com')}
-                            className="px-6 py-[18px] border border-white rounded-full text-white font-['Figtree:Medium',sans-serif] text-base"
-                        >
-                            Email Support
-                        </motion.button>
-                    </div>
-                </motion.div>
+      <section className="bg-[#010105] py-16 md:py-24">
+        <div className="container mx-auto px-6 md:px-[120px]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-start md:items-center text-left md:text-center gap-8 md:gap-9 md:max-w-[671px] md:mx-auto"
+          >
+            <div className="flex flex-col gap-4 text-white font-['Figtree:Regular',sans-serif]">
+              <h2 className="text-[32px] md:text-[40px] leading-[1.1] tracking-[-0.03em]">
+                Still Need a Hand?
+              </h2>
+              <p className="text-[16px] leading-[22px] tracking-[-0.056px]">
+                Our team of mentors is ready to help you navigate your
+                university admission journey. We are committed to making sure
+                every student in Nigeria feels supported and ready.
+              </p>
             </div>
-        </section>
+            <div className="flex flex-wrap gap-3 md:gap-4 items-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/2348122990975?text=Hello!%20I%20will%20like%20to%20know%20more%20about%20AcemyX.",
+                    "_blank",
+                  )
+                }
+                className="px-6 py-[18px] bg-[#dcfa7f] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-sm md:text-base hover:shadow-lg hover:shadow-[#dcfa7f]/20 transition-shadow"
+              >
+                Chat with a Mentor
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.open("mailto:contact@acemyx.com")}
+                className="px-6 py-[18px] border border-white rounded-full text-white font-['Figtree:Medium',sans-serif] text-sm md:text-base"
+              >
+                Email Support
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     );
 }
 
