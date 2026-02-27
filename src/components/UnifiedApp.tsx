@@ -154,9 +154,6 @@ function Header({ onMenuClick }: { onMenuClick?: () => void }) {
                             Reviews
                         </button>
                         <button onClick={() => window.open(ACADEMY_URL, '_blank')} className="text-white text-base font-['Figtree:Regular',sans-serif] hover:opacity-80 transition-opacity">
-                            For Tutors
-                        </button>
-                        <button onClick={() => window.open(ACADEMY_URL, '_blank')} className="text-white text-base font-['Figtree:Regular',sans-serif] hover:opacity-80 transition-opacity">
                             Resources
                         </button>
                     </nav>
