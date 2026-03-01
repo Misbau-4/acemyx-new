@@ -970,14 +970,14 @@ function Footer() {
                 { label: "Contact Us",    href: "mailto:contact@acemyx.com" },
             ],
         },
-        {
-            category: "Community",
-            links: [
-                { label: "Community Invite Link", href: ACADEMY_URL },
-                { label: "Study Community",       href: ACADEMY_URL },
-                { label: "Resources",             href: ACADEMY_URL },
-            ],
-        },
+        // {
+        //     category: "Community",
+        //     links: [
+        //         { label: "Community Invite Link", href: ACADEMY_URL },
+        //         { label: "Study Community",       href: ACADEMY_URL },
+        //         { label: "Resources",             href: ACADEMY_URL },
+        //     ],
+        // },
         {
             category: "Account",
             links: [
@@ -987,13 +987,13 @@ function Footer() {
                 { label: "Refer a Friend",           href: ACADEMY_URL },
             ],
         },
-        {
-            category: "Exams",
-            links: [
-                { label: "JAMB Prep",   href: ACADEMY_URL },
-                { label: "WAEC Tutor",  href: ACADEMY_URL },
-            ],
-        },
+        // {
+        //     category: "Exams",
+        //     links: [
+        //         { label: "JAMB Prep",   href: ACADEMY_URL },
+        //         { label: "WAEC Tutor",  href: ACADEMY_URL },
+        //     ],
+        // },
     ];
 
     return (
