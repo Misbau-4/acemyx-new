@@ -937,7 +937,7 @@ function StillNeedAHandSection() {
                     "_blank",
                   )
                 }
-                className="px-6 py-[18px] bg-[#dcfa7f] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-sm md:text-base hover:shadow-lg hover:shadow-[#dcfa7f]/20 transition-shadow"
+                className="px-6 py-[18px] bg-[#ffdb51] rounded-full text-[#0d114d] font-['Figtree:Medium',sans-serif] text-sm md:text-base hover:shadow-lg hover:shadow-[#dcfa7f]/20 transition-shadow"
               >
                 Chat with a Mentor
               </motion.button>
@@ -987,13 +987,13 @@ function Footer() {
                 { label: "Refer a Friend",           href: ACADEMY_URL },
             ],
         },
-        // {
-        //     category: "Exams",
-        //     links: [
-        //         { label: "JAMB Prep",   href: ACADEMY_URL },
-        //         { label: "WAEC Tutor",  href: ACADEMY_URL },
-        //     ],
-        // },
+        {
+            category: "Exams",
+            links: [
+                { label: "JAMB Prep",   href: ACADEMY_URL },
+                { label: "WAEC Tutor",  href: ACADEMY_URL },
+            ],
+        },
     ];
 
     return (
